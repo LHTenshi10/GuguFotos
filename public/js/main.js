@@ -1,0 +1,3 @@
+const albumsEl=document.querySelector('#albums'), search=document.querySelector('#search');
+async function load(){const q=encodeURIComponent(search.value);const r=await fetch('/api/albums?q='+q);const albums=await r.json();albumsEl.innerHTML=albums.length?albums.map(a=>`<a class="card" href="/album.html?id=${a.id}"><div class="cover">${a.cover?`<img src="${a.cover}" alt="${a.title}">`:''}</div><div class="meta"><span>${a.title}</span><span class="muted">${a.photoCount} foto${a.photoCount==1?'':'s'}</span></div></a>`).join(''):'<p>Nenhum álbum encontrado.</p>'}
+search.addEventListener('input',load);document.querySelector('#searchBtn').onclick=()=>search.focus();load();

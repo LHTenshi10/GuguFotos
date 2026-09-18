@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Álbum — GuguFotos</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="/">GuguFotos</a
+      ><a class="back" href="/">← Álbuns</a>
+    </header>
+    <main>
+      <section class="album-head">
+        <p id="count"></p>
+        <h1 id="title">Carregando...</h1>
+        <div id="description"></div>
+      </section>
+      <div id="photos" class="photo-grid"></div>
+    </main>
+    <div id="lightbox" class="lightbox">
+      <button id="close">×</button><button id="prev">‹</button
+      ><img id="lightboxImg" /><button id="next">›</button>
+    </div>
+    <footer><span>GuguFotos</span></footer>
+    <script src="/js/album.js"></script>
+  </body>
+</html>

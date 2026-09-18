@@ -1,0 +1,1 @@
+document.querySelector('#form').onsubmit=async e=>{e.preventDefault();const r=await fetch('/api/admin/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:document.querySelector('#password').value})});if(r.ok)location.href='/admin';else document.querySelector('#error').textContent=(await r.json()).error};
